@@ -1,0 +1,51 @@
+//  Itrative approch
+
+
+// import java.util.Scanner;
+// class powr{
+//     public static void main(String[] args) {
+//         Scanner sc=new Scanner(System.in);
+//         System.out.println("😒 GIVE TWO NUMBER , 🤖 FIRST BASE NUMBER AND SECOND POWER NUMBER");
+//         System.out.println(power(sc.nextInt(), sc.nextInt()));
+//         System.out.println("🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉");
+//         System.out.println("                       you got ans");
+//     }
+//     static int power(int number,int pow){
+//         int c=1,ans=1;
+//         while(pow>0){
+//             c*=number;
+//             if(pow % 2==1){
+//                ans*=c;
+//             }
+//             pow=pow>>1;
+//         }
+//         return ans;
+//     }
+// }
+
+
+//recursion approch
+
+class as{
+    static int power(int a,int b){
+        if(b==0){
+            return 1;
+        }
+       int c= power(a, b/2);
+        if(b%2==0){
+            System.out.println(c*c);
+            return c*c;
+        }
+        else{
+            System.out.println(c*c*a);
+            return c*c*a;
+        }
+       
+    }
+}
+class kdnfk{
+    public static void main(String[] args) {
+      int vaal= as.power(4, 5);
+      System.out.println(vaal);
+    }
+}
